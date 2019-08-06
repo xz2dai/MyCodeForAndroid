@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         vf.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                vf.showNext();
+                //vf.showNext();
                 return gd.onTouchEvent(event);
-                //return MainActivity.super.onTouchEvent(event);
+
             }
         });
     }
@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             if(velocityX < -10) {
-                vf.setAnimation(in_r21);
-                vf.setAnimation(out_r21);
+                vf.setInAnimation(in_r21);
+                vf.setOutAnimation(out_r21);
                 vf.showNext();
-            }else if(velocityY > 10){
-                vf.setAnimation(in_12r);
-                vf.setAnimation(out_12r);
+            }else if(velocityX > 10){
+                vf.setInAnimation(in_12r);
+                vf.setOutAnimation(out_12r);
                 vf.showPrevious();
             }
             return super.onFling(e1, e2, velocityX, velocityY);
