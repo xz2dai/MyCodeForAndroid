@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -29,9 +31,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initFruits();
         FruitAdapter adapter = new FruitAdapter(MainActivity.this,R.layout.fruit_item,fruitList);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fruit fruit = fruitList.get(position);
+                Toast.makeText(MainActivity.this,fruit.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initFruits(){
@@ -88,15 +99,29 @@ class FruitAdapter extends ArrayAdapter<Fruit>{
         resourceID = textViewResourceID;
     }
 
+    class ViewHolder{
+        ImageView fruitImage;
+        TextView fruitname;
+    }
+
     @androidx.annotation.NonNull
     @Override
     public View getView(int position, @androidx.annotation.Nullable View convertView, @androidx.annotation.NonNull ViewGroup parent) {
         Fruit fruit = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(resourceID,parent,false);
-        ImageView fruitImage = (ImageView)view.findViewById(R.id.fruit_image);
-        TextView fruitName = (TextView)view.findViewById(R.id.fruit_name);
-        fruitImage.setImageResource(fruit.getImageID());
-        fruitName.setText(fruit.getName());
+        View view;
+        ViewHolder viewHolder;
+        if(convertView == null) {
+            view = LayoutInflater.from(getContext()).inflate(resourceID,parent,false);
+            viewHolder = new ViewHolder();
+            viewHolder.fruitImage = (ImageView)view.findViewById(R.id.fruit_image);
+            viewHolder.fruitname = (TextView)view.findViewById(R.id.fruit_name);
+            view.setTag(viewHolder);
+        } else {
+            view = convertView;
+            viewHolder = (ViewHolder)view.getTag();
+        }
+        viewHolder.fruitImage.setImageResource(fruit.getImageID());
+        viewHolder.fruitname.setText(fruit.getName());
         return view;
     }
 }
