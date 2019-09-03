@@ -5,38 +5,19 @@
         android:layout_height="20dp"
     
         android:orientation="horizontal">
-    
-    
-        <TextView
-        
-            android:text="搜索栏"
-        
-            android:layout_width="wrap_content"
-        
-            android:layout_height="fill_parent"
-        
-            android:layout_weight="1"/>
-    
+
         <EditText
-        
             android:id="@+id/searchLine_EditText"
-        
+            android:hint="Search For Help"
             android:layout_width="wrap_content"
-        
             android:layout_height="fill_parent"
-        
             android:layout_weight="5"/>
     
         <Button
-        
             android:id="@+id/searchLine_Button"
-        
             android:text="点击搜索"
-        
             android:layout_width="wrap_content"
-        
             android:layout_height="fill_parent"
-        
             android:layout_weight="1"/>
 
 </LinearLayout>

@@ -1,26 +1,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="20dp"
-    android:orientation="horizontal">
-    
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#8CBFFF">
+
 
     <Button
         android:id="@+id/title_backButton"
-        android:text="Back"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="#67A6F7"
+        android:text="Back"
+        android:textSize="12sp" />
     <TextView
         android:id="@+id/title_titleText"
         android:text="This is Title"
-        android:textSize="27dp"
+        android:textSize="30sp"
         android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_weight="4"/>
+
     <Button
         android:id="@+id/title_menuButton"
-        android:text="Menu"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="#67A6F7"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:text="Menu"
+        android:textSize="12sp" />
 </LinearLayout>
