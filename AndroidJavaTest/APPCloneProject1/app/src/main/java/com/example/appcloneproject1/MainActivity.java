@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.right_button:
                 break;
             case R.id.searchLine_Button:
-                Toast.makeText(MainActivity.this,"开发中......",Toast.LENGTH_SHORT);
+                Toast.makeText(MainActivity.this,"开发中......",Toast.LENGTH_SHORT).show();
             default:
                 break;
         }
@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (resultCode){
             case 1:
                 if(resultCode == RESULT_OK){
-                    Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
                 }else if(resultCode == RESULT_CANCELED){
-                    Toast.makeText(MainActivity.this,"退出登录",Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this,"退出登录",Toast.LENGTH_SHORT).show();
                 }
                 break;
             default:
