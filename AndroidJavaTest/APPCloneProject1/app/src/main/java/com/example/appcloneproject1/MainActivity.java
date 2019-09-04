@@ -41,11 +41,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 LeftButtonClick();
                 break;
             case R.id.mid_button:
+                MidButtonClick();
                 break;
             case R.id.right_button:
+                RightButtonClick();
                 break;
             case R.id.searchLine_Button:
                 Toast.makeText(MainActivity.this,"开发中......",Toast.LENGTH_SHORT).show();
+                break;
             default:
                 break;
         }
@@ -81,9 +84,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void LeftButtonClick(){
-        Button button = findViewById(R.id.left_button);
-        button.setBackgroundColor(Color.parseColor("#4595FC"));
+        Button L_button = findViewById(R.id.left_button);
+        Button M_button = findViewById(R.id.mid_button);
+        Button R_button = findViewById(R.id.right_button);
+        L_button.setBackgroundColor(Color.parseColor("#4595FC"));
+        M_button.setBackgroundColor(Color.parseColor("#67A6F7"));
+        R_button.setBackgroundColor(Color.parseColor("#67A6F7"));
     }
+    private void MidButtonClick(){
+        Button L_button = findViewById(R.id.left_button);
+        Button M_button = findViewById(R.id.mid_button);
+        Button R_button = findViewById(R.id.right_button);
+        M_button.setBackgroundColor(Color.parseColor("#4595FC"));
+        L_button.setBackgroundColor(Color.parseColor("#67A6F7"));
+        R_button.setBackgroundColor(Color.parseColor("#67A6F7"));
+    }
+    
+    private void RightButtonClick(){
+        Button L_button = findViewById(R.id.left_button);
+        Button M_button = findViewById(R.id.mid_button);
+        Button R_button = findViewById(R.id.right_button);
+        R_button.setBackgroundColor(Color.parseColor("#4595FC"));
+        M_button.setBackgroundColor(Color.parseColor("#67A6F7"));
+        L_button.setBackgroundColor(Color.parseColor("#67A6F7"));
+    }
+    
     private void MenuBottonClick(){
         Button button = findViewById(R.id.title_menuButton);
         button.setOnClickListener(new View.OnClickListener() {
