@@ -34,10 +34,29 @@ public class ConnectThread extends Thread {
         }catch (IOException e){
             Log.e(TAG,"ConnectThread-->获取buletoothSocket异常！"+e.getMessage());
         }
+
+        mmSocket = tmp;
+        if (mmSocket != null){
+            Log.w(TAG,"ConnectThread --> 已获取BluetoothSocket");
+        }
     }
 
     @Override
     public void run() {
-        super.run();
+        if(mBluetoothAdapter == null){
+            Log.e(TAG,"ConnectThread:run --> mBluetoothAdapter == null");
+            return;
+        }
+        if(mBluetoothAdapter.isDiscovering()){
+            mBluetoothAdapter.cancelDiscovery();
+        }
+        if(mmSocket == null){
+            Log.e(TAG,"ConnectThread:run --> mmSocket == null");
+            return;
+        }
+        try{
+            Log.d(TAG,"ConnectThread:run --> 去连接");
+            if(onBluetoothConnectListener )
+        }
     }
 }
