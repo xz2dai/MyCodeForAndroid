@@ -1,32 +1,37 @@
 package com.example.broadcasttest;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+import android.net.Network;
+import android.net.NetworkRequest;
 import android.os.BatteryManager;
-import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ProgressBar;
-import android.widget.Toast;
+import android.widget.TextView;
 
-import java.util.logging.Level;
 
 public class MainActivity extends AppCompatActivity {
 
-    //private MyReceiver receiver;
     int level,scale,status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        IntentFilter filter = new IntentFilter();
-        //filter.addAction("android.net.conn.CONNECTIVIY_CHANGE");
+        CallForBattery();
+        CallForNet();
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
+    }
+
+    private void CallForBattery(){
         IntentFilter BatteryFliter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         Intent intent = getApplicationContext().registerReceiver(null,BatteryFliter);
         if(intent != null){
@@ -36,29 +41,25 @@ public class MainActivity extends AppCompatActivity {
         }
         ProgressBar progressBar = findViewById(R.id.progressbar);
         progressBar.setProgress(level);
-        //receiver = new MyReceiver();
-        //registerReceiver(receiver, filter);
     }
 
-    @Override
-    protected void onDestroy() {
-
-        super.onDestroy();
-        //unregisterReceiver(receiver);
-    }
-
-    class MyReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo info = connectivityManager.getActiveNetworkInfo();
-            if(info != null && info.isAvailable()){
-                Toast.makeText(context,"有网",Toast.LENGTH_LONG).show();
-
-            }else{
-                Toast.makeText(context,"没网",Toast.LENGTH_LONG).show();
+    public void CallForNet(){
+        final TextView text_net = findViewById(R.id.text_net);
+        final ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        cm.requestNetwork(new NetworkRequest.Builder().build(), new ConnectivityManager.NetworkCallback() {
+            @Override
+            public void onLost(Network network) {
+                super.onLost(network);
+                text_net.setText(R.string.net_msg_noNet);
             }
-        }
+
+            @Override
+            public void onAvailable(Network network) {
+                super.onAvailable(network);
+                text_net.setText(R.string.net_msg_haveNet);
+            }
+        });
+
 
     }
 }

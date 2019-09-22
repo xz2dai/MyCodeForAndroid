@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BroadcastTest</string>
+    <string name="net_msg_haveNet">网络已变更-可连接至Internet</string>
+    <string name="net_msg_noNet">网络已变更-无法连接至Internet</string>
 </resources>
