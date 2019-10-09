@@ -12,10 +12,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-import com.alipay.sdk.pay.demo.util.OrderInfoUtil2_0;
-import com.alipay.sdk.app.EnvUtils;
-import com.alipay.sdk.app.PayTask;
+import com.alipay.sdk.app.*;
 
 import java.util.Map;
 
@@ -24,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String APPID = "2016101300678068";
     public final String RSA2_PRIVATE = getString(R.string.RSA2_PRIVATE);
     public final String ALIPAY_PUBLIC_KEY = getString(R.string.ALIPAY_PUBLIC_KEY);
+    public static final String RSA_PRIVATE = "";
     private static final int SDK_PAY_FLAG = 1;
     private static final int SDK_AUTH_FLAG = 2;
 
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 case SDK_PAY_FLAG: {
                     @SuppressWarnings("unchecked")
                     PayResult payResult = new PayResult((Map<String, String>) msg.obj);
-                    /**
+                    /*
                      * 对于支付结果，请商户依赖服务端的异步通知结果。同步通知结果，仅作为支付结束的通知。
                      */
                     String resultInfo = payResult.getResult();// 同步返回需要验证的信息
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     break;
             }
-        };
+        }
     };
 
     public void payV2(View v) {
@@ -98,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                PayTask alipay = new PayTask(PayDemoActivity.this);
+                PayTask alipay = new PayTask(MainActivity.this);
                 Map<String, String> result = alipay.payV2(orderInfo, true);
                 Log.i("msp", result.toString());
 
@@ -116,18 +114,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
+        EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);              //沙箱环境
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-       /* alipayClient = new DefaultAlipayClient(
-                "https://openapi.alipay.com/gateway.do",
-                APPID,
-                RSA2_PRIVATE,
-                "json",
-                "UTF-8",
-                ALIPAY_PUBLIC_KEY,
-                "RSA2"); */
     }
 
     private static void showAlert(Context ctx, String info) {
@@ -140,20 +129,5 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.confirm, null)
                 .setOnDismissListener(onDismiss)
                 .show();
-    }
-
-    private static void showToast(Context ctx, String msg) {
-        Toast.makeText(ctx, msg, Toast.LENGTH_LONG).show();
-    }
-
-    private static String bundleToString(Bundle bundle) {
-        if (bundle == null) {
-            return "null";
-        }
-        final StringBuilder sb = new StringBuilder();
-        for (String key: bundle.keySet()) {
-            sb.append(key).append("=>").append(bundle.get(key)).append("\n");
-        }
-        return sb.toString();
     }
 }
