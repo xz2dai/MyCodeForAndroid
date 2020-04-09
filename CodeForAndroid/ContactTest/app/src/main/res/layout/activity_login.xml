@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LogInActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+        <Button
+            android:id="@+id/Login_fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;  返回"
+            android:textSize="18sp"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/Login_xinxi"
+            android:layout_height="50dp"
+            android:layout_width="fill_parent"
+            android:text="登陆到账号"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="19sp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="EParkCar"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="40sp"
+            android:theme="@android:style/Theme.Translucent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_launcher_background"
+                    />
+                <EditText
+                    android:id="@+id/Login_name"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="请输入账户名或电话号码" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <EditText
+                android:id="@+id/Login_password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="请输入密码"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Login_ConfirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:text="登录"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimaryDark"/>
+
+
+
+
+
+</LinearLayout>
