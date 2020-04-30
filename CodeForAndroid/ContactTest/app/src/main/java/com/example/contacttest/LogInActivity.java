@@ -1,5 +1,7 @@
 package com.example.contacttest;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -7,9 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Map;
+import java.util.Set;
+
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
+
+    SharedPreferences sp = getSharedPreferences("user", Context.MODE_PRIVATE);
+    SharedPreferences.Editor editor = sp.edit();
 
     Button btn_Confirm,btn_Agree,btn_fanhui,btn_Quit;
 

@@ -12,10 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONObject;
+import com.example.contacttest.bean.Bean.NewMessage;
 import com.example.contacttest.bean.UserOrdinary;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,11 +33,18 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
+    static boolean logflag;
+
     private final static String TAG = "Connect";
 
     public final static ExecutorService threadPoolExecutor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 3 + 2);
 
     Button btn1;
+
+
+    private static String ip = "120.79.87.21";
+    private static int portUpload = 5423;
+    private static int port = 5422;
 
     public void toastText(String message){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
@@ -56,8 +64,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,LogInActivity.class);
-                startActivity(intent);
+                threadPoolExecutor.execute(testconect);
             }
         });
 
@@ -73,22 +80,17 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    Runnable testconnect = new Runnable(){
-
-
-
+    Runnable testconect = new Runnable() {
         @Override
         public void run() {
-            //String me = "{\"type\":\"search\",\"name\":\"123\",\"passWord\":\"123\",\"login\":\"1\"}\n";
-            Connect ct = new Connect();
-            Message msg = new Message();
-            Bundle data = new Bundle();
-            JSONObject job = null;
-            ct.login("123","123");
-            data.putString("value","请求结果");
-            msg.setData(data);
-            handler.sendMessage(msg);
-            ct.close();
+
+            Connect ct = Connect.getConncet();
+
+            NewMessage newMessage1 = ct.newMessage(1);
+            Log.i(TAG,String.valueOf(newMessage1.getMessageId()));
+            Log.i(TAG,newMessage1.getMessageTitle());
+            Log.i(TAG,newMessage1.getMessagecontent());
+
         }
     };
 
