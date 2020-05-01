@@ -1,10 +1,12 @@
 package com.example.contacttest;
 
 import android.content.ContentProvider;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
@@ -15,6 +17,10 @@ import com.example.contacttest.bean.Bean.UserOrdinary;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -33,15 +39,21 @@ public class Connect {
     //图片交互接口
     private Socket ImageSocket = null;
 
+    //普通交互流
     private OutputStream dout = null;
     private InputStreamReader din = null;
 
-
-    private JSONObject jsonData = null;
+    //图片交互流
+    File file = new File();
+    private OutputStream imageOutputStream = null;
+    private InputStreamReader imageInputStream = null;
+    private DataOutputStream imageFileOutputSteam = null;
+    private FileInputStream imageFileInputSteam = null;
 
     //数据持久化操作
     private SharedPreferences sp_user;
     private SharedPreferences.Editor editor_user;
+
 
 
 
@@ -55,11 +67,13 @@ public class Connect {
 
     }
 
-    private void InitConnect(){
+    private void InitConnect(File file){
         try {
             sc = new Socket(ip,port);       //通过socket连接服务器
             din = new InputStreamReader(sc.getInputStream(),"gb2312");
             dout = sc.getOutputStream();
+            imageFileOutputSteam = new DataOutputStream(ImageSocket.getOutputStream());
+            imageFileInputSteam = new FileInputStream(file);          //需要提供一个储存路径
             if(sc!=null){
                 Log.i(TAG,"connect server successful");
             }
