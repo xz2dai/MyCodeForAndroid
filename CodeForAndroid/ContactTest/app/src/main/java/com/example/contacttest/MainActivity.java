@@ -3,7 +3,9 @@ package com.example.contacttest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.nfc.Tag;
@@ -15,6 +17,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,11 +52,14 @@ public class MainActivity extends AppCompatActivity {
     Button btn1;
     TextView text1,text2;
     EditText editText1,editText2;
+    ImageButton image1;
 
 
     private static String ip = "120.79.87.21";
     private static int portUpload = 5423;
     private static int port = 5422;
+
+    Connect ct;
 
     Bitmap bitmap;
 
@@ -70,11 +77,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ct = Connect.getConncet();
+        Connect.Init(this);
         btn1 = findViewById(R.id.btn1);
         text1 = findViewById(R.id.text1);
         text2 = findViewById(R.id.text2);
         editText1 = findViewById(R.id.edit1);
         editText2 = findViewById(R.id.edit2);
+        image1 = findViewById(R.id.image1);
+        image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(intent, 2);
+
+            }
+        });
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode == 2) {
             // 从相册返回的数据
@@ -92,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 Uri uri = data.getData();
                 try {
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
+                    image1.setImageBitmap(bitmap);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -114,15 +136,13 @@ public class MainActivity extends AppCompatActivity {
     Runnable testconect = new Runnable() {
         @Override
         public void run() {
+            SharedPreferences sp_user = getSharedPreferences("user", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor_user = sp_user.edit();
+            editor_user.putInt("PhoneNum", 123);
+            editor_user.apply();
 
-            Connect ct = Connect.getConncet();
-
-            NewMessage newMessage1 = ct.newMessage(1);
-            Log.i(TAG,String.valueOf(newMessage1.getMessageId()));
-            Log.i(TAG,newMessage1.getMessageTitle());
-            Log.i(TAG,newMessage1.getMessagecontent());
-            Message msg = new Message();
-
+            bitmap = ct.getHeadPortrait();
+            image1.setImageBitmap(bitmap);
         }
     };
 
