@@ -12,6 +12,7 @@ import com.example.contacttest.bean.Bean.NewMessage;
 import com.example.contacttest.bean.Bean.UserOrdinary;
 
 import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,6 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.concurrent.Delayed;
 
 public class Connect {
 
@@ -43,10 +45,8 @@ public class Connect {
     private InputStreamReader din = null;
 
     //图片交互流
-    private OutputStream imageOutputStream = null;
     private InputStream imageInputStream = null;
     private DataOutputStream imageFileOutputSteam = null;
-    private FileInputStream imageFileInputSteam = null;
 
     //数据持久化操作
     private static SharedPreferences sp_user;
@@ -73,6 +73,7 @@ public class Connect {
             sc = new Socket(ip,port);       //通过socket连接服务器
             din = new InputStreamReader(sc.getInputStream(),"gb2312");
             dout = sc.getOutputStream();
+            sc.setSoTimeout(10000);
             if(sc!=null){
                 Log.i(TAG,"connect image port successful");
             }
@@ -119,35 +120,10 @@ public class Connect {
             if(ImageSocket.isConnected()){
                 imageFileOutputSteam = new DataOutputStream(ImageSocket.getOutputStream());
                 if(imageFileOutputSteam != null){
-                    File file = new File(context.getDataDir(),"HeadPortrait.png");
-                    if(!file.exists()){
-                        if(file.createNewFile()){
-                            Log.i(TAG,"buffer image creat successful");
-                        }else{
-                            Log.i(TAG,"buffer image creat failed");
-                        }
-                    }
                     imageInputStream = ImageSocket.getInputStream();
-                    /*
-                    BufferedInputStream bis = new BufferedInputStream(imageInputStream);
-                    Bitmap bitmap = BitmapFactory.decodeStream(bis);
-                    File f = new File(file.getPath());
-                    File bmpFile = new File(context.getDataDir(), "screen.png");
-                    if (!f.exists()) {
-                        f.mkdirs();
-                    }
-                    if (bmpFile.exists()) {
-                        bmpFile.delete();
-                    }
-                    FileOutputStream out = new FileOutputStream(bmpFile);
-
-                     */
-                    imageFileInputSteam = new FileInputStream(file);          //从传入的context中获取应用储存路径,用于储存图片
-                    if(imageFileInputSteam != null){
+                    if(imageInputStream!=null){
                         Log.i(TAG,"ImageIO Ready");
                         return true;
-                    }else{
-                        Log.i(TAG,"imageInputStream is null");
                     }
                 }else{
                     Log.i(TAG,"imageOutputStream is null");
@@ -165,10 +141,10 @@ public class Connect {
         if(ImageSocket.isConnected()){
             try {
                 ImageSocket.close();
-                imageFileInputSteam.close();
-                imageFileOutputSteam.close();
-                imageInputStream.close();
-                imageOutputStream.close();
+                if(imageFileOutputSteam != null)
+                    imageFileOutputSteam.close();
+                if(imageInputStream != null)
+                    imageInputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -184,6 +160,22 @@ public class Connect {
      * 上传图片前必须传输用户信息，必须包含有name
      */
     public boolean UploadImage(Bitmap image_toSend){
+        try {
+            if(InitImageIO()){
+                Log.i(TAG,"start send image");
+                image_toSend.compress(Bitmap.CompressFormat.PNG, 100, imageFileOutputSteam);        //把图片按参数压缩后压入输出流
+                imageFileOutputSteam.flush();
+                Thread.sleep(2000);
+                Log.i(TAG,"send image successful");
+                CloseConnect();
+                return true;
+            }else{
+                Log.i(TAG,"Init imageIO failed");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        Log.i(TAG,"send image failed");
         return false;
     }
 
@@ -195,23 +187,20 @@ public class Connect {
         Bitmap image_receive = null;
         try{
             if(InitImageIO()){
-                /*
-                byte[] me = new byte[100*1024];         //先设个100kb试试
-                int length = imageFileInputSteam.read(me);
-                Log.i(TAG,"image length:"+length);
-                image_receive = BitmapFactory.decodeByteArray(me,0,length);
-                if(null != image_receive){
-                    Log.i(TAG,"decode image successful");
-                }else {
-                    Log.i(TAG,"decode image failed,image still null");
+                try {
+                    Thread.sleep(2000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
                 }
-
-                 */
-                readImage(ImageSocket);
+                Log.i(TAG,"start receive image message");
+                image_receive = BitmapFactory.decodeStream(imageInputStream);
+                if(image_receive!=null)
+                    Log.i(TAG,"receive image successful");
             }
         }catch (Exception e){
             e.printStackTrace();
         }
+
         CloseImageIO();
         return image_receive;
     }
@@ -366,12 +355,13 @@ public class Connect {
         job.put("name", String.valueOf(sp_user.getInt("PhoneNum",123)));            //获取保存在本地的账户名
         job.put("upHeadPortrait","2");
         job.put("type","search");
+        job.put("password",sp_user.getString("Password","1234"));
+        job.put("login","1");
 
         String Msend = "";
         Msend = updata("newMessage",job);       //转换为字符串
         sendMessage(Msend);
-        //String reply = receiveMessage();    //获取服务器返回信息
-        CloseConnect();
+        String reply = receiveMessage();    //获取服务器返回信息
         return ReceiveImage();
     }
 
@@ -496,17 +486,20 @@ public class Connect {
     /**
      * 修改头像
      */
-    public void upHeadPortrait(){       //先发送头像更改请求，然后再上传图片
+    public void upHeadPortrait(Bitmap bitmap){       //先发送头像更改请求，然后再上传图片
         JSONObject job = new JSONObject();
-        job.put("name", String.valueOf(sp_user.getInt("PhoneNum",123)));      //获取保存在本地的账户名
+        job.put("name", String.valueOf(sp_user.getInt("PhoneNum",12342)));      //获取保存在本地的账户名
         job.put("type","updata");
         job.put("upHeadPortrait","1");
+        job.put("password",sp_user.getString("Password","110"));
+        job.put("login","1");
 
         String Msend = updata("upHeadPortrait",job);    //先发送修改头像请求
         sendMessage(Msend);
-        String reply = receiveMessage();
-        Log.i(TAG,reply);
-
+        CloseConnect();         //没设置回复直接关闭接口
+        //String reply = receiveMessage();
+        //Log.i(TAG,reply);
+        UploadImage(bitmap);
 
     }
 
@@ -531,33 +524,6 @@ public class Connect {
     }
 
 
-    public void readImage(Socket socket)
-    {
-        try
-        {
-            InputStream in = socket.getInputStream();
-            BufferedInputStream bis = new BufferedInputStream(in);
-            Bitmap bitmap = BitmapFactory.decodeStream(bis);//这个好像是android里的
-            //首先看看文件是否存在
-            File f = new File(context.getDataDir().getPath());
-            File bmpFile = new File(context.getDataDir(), "screen.png");
-            if (!f.exists()) {
-                f.mkdirs();
-            }
-            if (bmpFile.exists()) {
-                bmpFile.delete();
-            }
-            FileOutputStream out = new FileOutputStream(bmpFile);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100,out);
-            bis.close();
-            in.close();
 
-        }
-        catch(Exception ex)
-        {
-            Log.v(TAG, ex.getMessage());
-
-        }
-    }
 
 }

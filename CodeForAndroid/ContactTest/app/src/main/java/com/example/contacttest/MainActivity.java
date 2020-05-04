@@ -1,15 +1,21 @@
 package com.example.contacttest;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
@@ -28,9 +34,12 @@ import com.example.contacttest.bean.UserOrdinary;
 
 import org.json.JSONException;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.lang.reflect.Field;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
@@ -113,7 +122,16 @@ public class MainActivity extends AppCompatActivity {
                 Uri uri = data.getData();
                 try {
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
-                    image1.setImageBitmap(bitmap);
+                    threadPoolExecutor.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                ct.upHeadPortrait(bitmap);
+                            }catch (Exception e){
+                                e.printStackTrace();
+                            }
+                        }
+                    });
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -124,25 +142,52 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("HandlerLeak")
     Handler handler = new Handler(){
         @Override
-        public void handleMessage(Message msg) {
+        public void handleMessage(Message msg) {        //程序结束后没消除，可能导致内存泄露
             super.handleMessage(msg);
-            Bundle data = msg.getData();
-            String val = data.getString("value");
-            text2.setText(val);
-            Log.d(TAG,"请求结果-->" + val);
+            switch (msg.what){
+                case 1:
+                    Bundle data = msg.getData();
+                    bitmap = (Bitmap)msg.obj;
+                    image1.setImageBitmap(bitmap);
+                    break;
+                case 2:
+                    break;
+                default:
+                        break;
+            }
+
         }
     };
 
     Runnable testconect = new Runnable() {
         @Override
         public void run() {
-            SharedPreferences sp_user = getSharedPreferences("user", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor_user = sp_user.edit();
-            editor_user.putInt("PhoneNum", 123);
-            editor_user.apply();
 
+            /*
             bitmap = ct.getHeadPortrait();
-            image1.setImageBitmap(bitmap);
+            Message msg = new Message();
+            msg.what = 1;
+            msg.obj = bitmap;
+            handler.sendMessage(msg);
+
+             */
+            try {
+                if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+                }
+                File file = new File(getFilesDir()+"/image");
+                Log.i(TAG,file.toString());
+                if (!file.exists()) {
+                    file.mkdirs();
+                }
+                File f = new File(file, "test.txt");
+                FileOutputStream fos = new FileOutputStream(f);
+                fos.write(new String("test test test").getBytes());
+                fos.flush();
+                fos.close();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }
     };
 
