@@ -163,14 +163,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
 
-            /*
+
             bitmap = ct.getHeadPortrait();
             Message msg = new Message();
             msg.what = 1;
             msg.obj = bitmap;
             handler.sendMessage(msg);
 
-             */
+
+            /*
             try {
                 if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
@@ -188,6 +189,8 @@ public class MainActivity extends AppCompatActivity {
             }catch (IOException e){
                 e.printStackTrace();
             }
+
+             */
         }
     };
 
