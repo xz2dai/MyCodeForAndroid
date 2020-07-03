@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MainActivity">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+    android:orientation="vertical"
+tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+<TextView
+    android:id="@+id/textID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello World!" />
+<ImageView
+    android:id="@+id/imageview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edittext"
+        android:hint="输入Pvid获取图片"
+        android:layout_width="190dp"
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/btn_changeLocal"
+        android:text="修改路径"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg_white"/>
+    <Button
+        android:id="@+id/btn_getIMG"
+        android:text="获取"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg_bule"/>
+
 </LinearLayout>
