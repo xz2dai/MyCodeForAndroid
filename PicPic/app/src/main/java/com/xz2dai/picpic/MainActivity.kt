@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener  {
         when(v){
             btn_getIMG -> getImg()
             btn_changeLocal -> changeLocal()
-            imageview ->{
+            imageview ->{   //点击图片放大缩小
                 if (!reSize){
                     //初始处于缩放状态，点击后放大到全屏
                 }else{
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener  {
     }
 
     private fun changeLocal() {
-
+        //更换保存路径
     }
 
     fun getImg(){
