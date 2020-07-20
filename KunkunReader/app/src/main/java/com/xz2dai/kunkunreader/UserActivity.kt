@@ -1,17 +1,13 @@
 package com.xz2dai.kunkunreader
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity(),View.OnClickListener {
+class UserActivity : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-
-    fun showToast(msg: CharSequence) {
-        showToast(msg)
+        setContentView(R.layout.activity_user)
     }
 
     override fun onClick(v: View?) {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".UserActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -12,48 +12,33 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:background="@color/white"
-        android:layout_alignParentTop="true"
         >
 
         <Button
-            android:id="@+id/Main_leftBtn"
+            android:id="@+id/User_back"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:background="@null"
-            android:text=""
+            android:text="&lt;  返回"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/Shop_Title"
+            android:id="@+id/User_Title"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:gravity="center"
             android:layout_weight="1"
-            android:text="我的书架"
+            android:text="个人信息"
             android:textColor="@color/black"
             android:textSize="19sp" />
         <Button
-            android:id="@+id/Shop_rightBtn"
+            android:id="@+id/User_JumpTo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             android:text=""
-            android:textSize="18sp" />
+            android:textSize="18sp"
+             />
     </LinearLayout>
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-    />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-        <Button
-            android:id="@+id/Main_ToShop"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
-</>
+</LinearLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KunkunReader</string>
+    <string name="title_activity_read">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="read_wait">加载中，请稍后</string>
 </resources>
