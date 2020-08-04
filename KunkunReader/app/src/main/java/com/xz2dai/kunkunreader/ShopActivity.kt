@@ -9,8 +9,8 @@ import org.json.JSONObject
 class ShopActivity : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_shop)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE) //取消标题栏
+        setContentView(R.layout.activity_shop)
     }
 
     override fun onClick(v: View?) {

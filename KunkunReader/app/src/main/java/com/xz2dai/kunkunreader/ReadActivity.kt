@@ -19,9 +19,8 @@ class ReadActivity : AppCompatActivity(),View.OnClickListener, View.OnTouchListe
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.activity_read)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE) //取消标题栏
+        setContentView(R.layout.activity_read)
 
         Read_ContentTextView.setOnClickListener(this)
 

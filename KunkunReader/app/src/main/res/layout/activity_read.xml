@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="@drawable/read_background"
     tools:context=".ReadActivity">
 
     <LinearLayout
@@ -12,7 +12,6 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:background="@color/white"
         android:visibility="invisible"
         android:enabled="false"
         >
@@ -50,9 +49,31 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:text="@string/read_wait"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:text="@string/test_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/Read_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1%"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/Read_chapterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="50dp"
+            android:text="1.疯狂年代"
+            android:textSize="20dp"/>
+    </LinearLayout>
 
 </FrameLayout>

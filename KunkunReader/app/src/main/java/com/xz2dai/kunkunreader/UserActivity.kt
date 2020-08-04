@@ -8,8 +8,8 @@ import android.view.Window
 class UserActivity : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE) //取消标题栏
+        setContentView(R.layout.activity_user)
     }
 
     override fun onClick(v: View?) {

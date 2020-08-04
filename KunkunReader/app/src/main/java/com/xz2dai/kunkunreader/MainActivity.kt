@@ -8,6 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.Executors
 
+/**
+ * @author  袁铨
+ * @date    2020-7-30
+ * 一个基于安卓平台的读书App
+ */
+
+
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     //线程池
@@ -15,13 +22,15 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE) //取消标题栏
+        setContentView(R.layout.activity_main)
 
         Main_AddLocal.setOnClickListener(this)
         Main_Config.setOnClickListener(this)
         Main_ToInfo.setOnClickListener(this)
         Main_ToShop.setOnClickListener(this)
+
+        imgUrl.setOnClickListener(this)
     }
 
     fun showToast(msg: CharSequence) {
@@ -42,7 +51,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             Main_ToShop -> {
                 startActivity(Intent(this,ShopActivity::class.java))
             }
-
+            imgUrl -> {
+                startActivity(Intent(this,ReadActivity::class.java))
+            }
         }
     }
 }
