@@ -1,0 +1,366 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_light_click.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\light_click.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_corner_down.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_corner_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_touch_space.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_touch_space.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_charpter_normal.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_charpter_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_shuqi_click.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_shuqi_click.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bg_click.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\bg_click.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_shuqi_index_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_shuqi_index_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_no_cover.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_no_cover.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_santi.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\santi.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_start_read.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_start_read.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_qidian_icon.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_qidian_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_light.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_mainradio_private_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_mainradio_private_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_btn_bg_dottedline.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\btn_bg_dottedline.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_checkbox_check.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_checkbox_check.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_slide.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_slide.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_model.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_model.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_jianjiao.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_jianjiao.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_own_normal.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_own_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_font_click.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\font_click.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_private_black.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_private_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_search_button.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable\\search_button.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_menu.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_charpter.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_charpter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_model_own.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_model_own.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable_search_head.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable\\search_head.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_btn_gb_red.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\btn_gb_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_light_normal.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\light_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_model_normal.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_model_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_readbook_textcolor.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_readbook_textcolor.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_read.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\layout\\activity_read.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_chouse_gender_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_chouse_gender_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_read_background.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\read_background.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_msg.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_msg.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_own_click.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_own_click.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_back_black.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_back_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_btn_bg_white.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\btn_bg_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_chouse_gender_text.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_chouse_gender_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\layout\\activity_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_shuqi_index_color.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_shuqi_index_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_right.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_right.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_mainradio_textcolor.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_mainradio_textcolor.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_inner_layout_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_inner_layout_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_checkbox_uncheck.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_checkbox_uncheck.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_market.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_market.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_market_black.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_market_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_inner.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_inner.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_search_green.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_search_green.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_checkbox.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_headset.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\headset.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_start_read_normal.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_start_read_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_start_read_click.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_start_read_click.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bg_normal.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\bg_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_main_add.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_main_add.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_bottom_line.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_bottom_line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_point.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_point.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_setting_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_setting_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_main_add_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_main_add_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_top_line.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_top_line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_font_normal.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\font_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_btn_bg_bule.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\btn_bg_bule.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_private.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_private.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_corner.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_shop.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\layout\\activity_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_search.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_search.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_model_click.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_model_click.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_mainradio_market_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_mainradio_market_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_corner_up.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_corner_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_white_circle.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_white_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_back_white.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_back_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_font.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\selector_font.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_topbottom_line.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_topbottom_line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_charpter_click.png.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\icon_charpter_click.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_shuqi_normal.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_shuqi_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_search_bg.xml.flat",
+        "source": "C:\\Users\\Administrator\\Documents\\Code\\MyCodeForAndroid\\KunkunReader\\app\\src\\main\\res\\drawable-v24\\shape_search_bg.xml"
+    }
+]
