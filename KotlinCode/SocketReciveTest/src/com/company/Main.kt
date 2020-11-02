@@ -13,10 +13,11 @@ object Main {
     @JvmStatic
     fun main(args: Array<String>) {
         val count = 0
-        val port = 8080
+        val port = 2333
         var sc: Socket? = null
 
         doLog.newLog()
+        print("Log path:"+doLog.getLogPath()+"\n")
 
 
 

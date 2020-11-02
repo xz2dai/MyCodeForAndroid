@@ -1,14 +1,9 @@
 package com.company
 
-import jdk.nashorn.internal.ir.RuntimeNode
-import sun.misc.Request
 import java.io.File
 import java.lang.Exception
 import java.nio.file.Path
-import java.time.Month
 import java.util.*
-import javax.xml.crypto.Data
-import kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder
 
 /*
 一个用于写日志的类
@@ -16,18 +11,25 @@ import kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder
 
 object doLog {
     var nowtime:Calendar = Calendar.getInstance()
-    //private val Logpath:String =
-    private val Logpath:String = "/www/server/tomcat/webapps/"
-    private var date:String = nowtime.get(Calendar.YEAR).toString()+"-"+nowtime.get(Calendar.MONTH+1).toString()+"-"+nowtime.get(Calendar.DATE).toString()
-    private var time:String = nowtime.get(Calendar.HOUR_OF_DAY).toString()+"-"+nowtime.get(Calendar.MINUTE).toString()+"-"+nowtime.get(Calendar.SECOND).toString()
+    private var Logpath:String = "D:/"
+    //private val Logpath:String = "/www/server/tomcat/webapps/"
+//    private var date:String = nowtime.get(Calendar.YEAR).toString()+"-"+nowtime.get(Calendar.MONTH+1).toString()+"-"+nowtime.get(Calendar.DATE).toString()
+//    private var time:String = nowtime.get(Calendar.HOUR_OF_DAY).toString()+"-"+nowtime.get(Calendar.MINUTE).toString()+"-"+nowtime.get(Calendar.SECOND).toString()
+    val date = Date()
     private lateinit var file:File
+    init {
+        if(System.getProperty("os.name").toLowerCase().contains("linux")){
+            Logpath = "/user/"
+        }
+    }
     //添加日志
     fun addLog(msg:String,type:String="info"){
         try {
             if(file.canWrite()){
-                correctTime()
+//                correctTime()
                 //日期-时间-类名-类型[Info]-问题
-                file.appendText(date+"-"+time+"-"+type.toUpperCase()+":"+msg+"\n")
+//                file.appendText(date+"-"+time+"-"+type.toUpperCase()+":"+msg+"\n")
+                file.appendText(date.toString()+"-"+type.toUpperCase()+":"+msg+"\n")
             }else{
                 println("can not write to file!")
             }
@@ -65,9 +67,11 @@ object doLog {
     fun getLogPath():Path{
         return file.toPath()
     }
-    fun correctTime(){
-        nowtime = Calendar.getInstance()
-        date = nowtime.get(Calendar.YEAR).toString()+"-"+nowtime.get(Calendar.MONTH+1).toString()+"-"+nowtime.get(Calendar.DATE).toString()
-        time = nowtime.get(Calendar.HOUR_OF_DAY).toString()+"-"+nowtime.get(Calendar.MINUTE).toString()+"-"+nowtime.get(Calendar.SECOND).toString()
-    }
+    //刷新时间
+//    fun correctTime(){
+//        nowtime = Calendar.getInstance()
+//        date = nowtime.get(Calendar.YEAR).toString()+"-"+nowtime.get(Calendar.MONTH+1).toString()+"-"+nowtime.get(Calendar.DATE).toString()
+//        time = nowtime.get(Calendar.HOUR_OF_DAY).toString()+"-"+nowtime.get(Calendar.MINUTE).toString()+"-"+nowtime.get(Calendar.SECOND).toString()
+//
+//    }
 }

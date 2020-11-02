@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.Executors
 
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     //线程池
     val threadPoolExecutor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 3 + 2)
 
+    val bookshelf:RecyclerView = Main_bookShelf
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE) //取消标题栏
@@ -30,7 +33,6 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         Main_ToInfo.setOnClickListener(this)
         Main_ToShop.setOnClickListener(this)
 
-        imgUrl.setOnClickListener(this)
     }
 
     fun showToast(msg: CharSequence) {
@@ -50,9 +52,6 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
             Main_ToShop -> {
                 startActivity(Intent(this,ShopActivity::class.java))
-            }
-            imgUrl -> {
-                startActivity(Intent(this,ReadActivity::class.java))
             }
         }
     }

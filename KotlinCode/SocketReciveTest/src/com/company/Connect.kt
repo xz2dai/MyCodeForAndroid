@@ -166,7 +166,7 @@ public constructor(socket: Socket) {
                 } else {
                     doLog.addLog("The message to be sent is empty or have no connect")
                 }
-                doLog.addLog("send message successful")
+                doLog.addLog("send message \"$message\" successful")
             } else {
                 doLog.addLog("no connect to send message")
             }

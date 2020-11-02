@@ -42,50 +42,14 @@
             android:textSize="18sp" />
     </LinearLayout>
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:rowCount="3"
-        android:columnCount="3"
-        android:paddingLeft="40dp"
-        android:layout_below="@+id/Main_TopBar">
-        <LinearLayout
-            android:id="@+id/data_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="10dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Main_bookShelf"
+        android:layout_above="@id/Main_BottomBar"
+        android:layout_below="@id/Main_TopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/imgUrl"
-                style="@android:style/Animation.Translucent"
-                android:layout_width="90dp"
-                android:layout_height="120dp"
-                android:background="santi"
-                android:scaleType="centerCrop"
-                android:src="@drawable/santi" />
-
-            <TextView
-                android:id="@+id/bookName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                tools:text="三体" />
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/add_btn"
-            android:layout_width="90dp"
-            android:layout_height="120dp"
-            android:layout_margin="15dp"
-            android:background="@drawable/shape_main_add_bg"
-            android:scaleType="center"
-            android:src="@drawable/icon_main_add" />
-    </GridLayout>
+    </>
 
     <LinearLayout
         android:id="@+id/Main_BottomBar"
